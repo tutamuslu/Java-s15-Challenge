@@ -5,7 +5,7 @@ import com.workintech.model.enums.BookType;
 
 import java.util.List;
 
-public interface ILabrarian {
+public interface ILibrarian {
     List<Book> listBooksByCategory(BookType bookType);
-    List<Book> listBooksByAuthor();
+
 }

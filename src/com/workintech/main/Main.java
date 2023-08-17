@@ -38,9 +38,9 @@ public class Main {
         System.out.println("---------- KOMUTLAR -------");
         System.out.println("1-Yeni Kitap Ekle");
         System.out.println("2-Kitap Sil");
-        System.out.println("3-Kitap Güncelle");
-        System.out.println("4-Kategoriye Göre Kitap Listele");
-        System.out.println("5-Tüm Kitapları Listele");
+        System.out.println("3-Kategoriye Göre Kitap Listele");
+        System.out.println("4-Tüm Kitapları Listele");
+        System.out.println("5-Kitap Güncelle");
 
         Scanner scanner = new Scanner(System.in);
 
@@ -79,11 +79,6 @@ public class Main {
                 System.out.println("Kitap başarıyla silindi.");
             }
             else if(command.equals("3")){
-                System.out.println("---------- Kütüphanedeki Kitaplar ---------");
-                List<Book> books = library.getBooks();
-                writeBooks(books);
-            }
-            else if(command.equals("4")){
                 System.out.println("---------- Kategoriler ---------");
                 System.out.println("Roman = 1,\n" +
                         "    Dergi = 2,\n" +
@@ -94,8 +89,13 @@ public class Main {
                 List<Book> books = librarian.listBooksByCategory(BookType.values()[bookType]);
                 writeBooks(books);
             }
-            else if(command.equals("5")) {
+            else if(command.equals("4")){
                 System.out.println("---------- Tüm Kitaplar ---------");
+                List<Book> books = library.getBooks();
+                writeBooks(books);
+            }
+            else if(command.equals("5")) {
+                System.out.println("---------- Kütüphanedeki Kitaplar ---------");
                 List<Book> books = library.getBooks();
                 writeBooks(books);
             }

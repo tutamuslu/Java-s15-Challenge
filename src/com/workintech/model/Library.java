@@ -40,19 +40,4 @@ public class Library implements ILibrary {
         }
     }
 
-    @Override
-    public void lendBook(Book book) {
-        //this.books.
-    }
-
-    @Override
-    public void takeBackBook(Book book) {
-
-    }
-
-    @Override
-    public Book showBook() {
-        return null;
-    }
-
 }

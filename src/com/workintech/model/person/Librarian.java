@@ -3,12 +3,12 @@ package com.workintech.model.person;
 import com.workintech.model.Library;
 import com.workintech.model.books.Book;
 import com.workintech.model.enums.BookType;
-import com.workintech.model.interfaces.ILabrarian;
+import com.workintech.model.interfaces.ILibrarian;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Librarian extends Person implements ILabrarian {
+public class Librarian extends Person implements ILibrarian {
     private String name;
     private String password;
     private Library library;
@@ -27,11 +27,6 @@ public class Librarian extends Person implements ILabrarian {
             }
         }
         return result;
-    }
-
-    @Override
-    public List<Book> listBooksByAuthor() {
-        return null;
     }
 
     @Override
