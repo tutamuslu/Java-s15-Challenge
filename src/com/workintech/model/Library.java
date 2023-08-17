@@ -1,7 +1,7 @@
 package com.workintech.model;
 
 import com.workintech.model.books.Book;
-import com.workintech.model.signature.ILibrary;
+import com.workintech.model.interfaces.ILibrary;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class Library implements ILibrary {
         this.readers = new ArrayList<>();
     }
 
-    public List<Book> getBooks() {
+    public List<Book> getBooks(){
         return books;
     }
 
@@ -27,6 +27,16 @@ public class Library implements ILibrary {
     @Override
     public void newBook(Book book) {
         this.books.add(book);
+    }
+
+    @Override
+    public void deleteBook(int id) {
+        for(int i = 0; i < books.size(); i++){
+            if(books.get(i).getId() == id){
+                books.remove(books.get(i));
+                break;
+            }
+        }
     }
 
     @Override
@@ -44,12 +54,4 @@ public class Library implements ILibrary {
         return null;
     }
 
-    @Override
-    public String toString() {
-        String result = "";
-        for (int i = 0; i < books.size(); i++){
-            result += books.get(i).getName() + "\n";
-        }
-        return result;
-    }
 }

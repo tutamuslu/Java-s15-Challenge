@@ -1,12 +1,13 @@
 package com.workintech.model.books;
 
+import com.workintech.model.enums.BookType;
 import com.workintech.model.person.Author;
 
 public class Journal extends Book{
     public Journal(){
 
     }
-    Journal(String name, Author author) {
-        super(name, author);
+    Journal(int id, String name, Author author) {
+        super(id, name, author, BookType.JOURNAL);
     }
 }

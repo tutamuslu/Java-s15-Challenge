@@ -15,4 +15,6 @@ public class Author extends Person{
     String whoYouAre() {
         return "Yazar : " + name;
     }
+
+
 }

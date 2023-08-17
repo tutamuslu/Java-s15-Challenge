@@ -1,4 +1,4 @@
 package com.workintech.model.member;
 
-public class Faculty {
+public class Faculty extends Member{
 }
