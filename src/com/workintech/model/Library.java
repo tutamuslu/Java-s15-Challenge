@@ -2,6 +2,7 @@ package com.workintech.model;
 
 import com.workintech.model.books.Book;
 import com.workintech.model.interfaces.ILibrary;
+import com.workintech.model.person.Reader;
 
 import java.util.ArrayList;
 import java.util.List;

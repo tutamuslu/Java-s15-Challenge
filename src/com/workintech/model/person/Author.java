@@ -12,7 +12,7 @@ public class Author extends Person{
     }
 
     @Override
-    String whoYouAre() {
+    public String whoYouAre() {
         return "Yazar : " + name;
     }
 

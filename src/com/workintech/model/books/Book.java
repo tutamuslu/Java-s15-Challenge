@@ -5,7 +5,7 @@ import com.workintech.model.person.Author;
 
 import java.util.Date;
 
-public abstract class Book {
+public class Book {
     private int id;
     private String name;
     private double price;
@@ -15,7 +15,7 @@ public abstract class Book {
     private Author author;
     private BookType bookType;
     Book(){
-
+        // factory için kullandım
     }
     Book(int id, String name, Author author, BookType bookType){
         this.id = id;

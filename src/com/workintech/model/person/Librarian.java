@@ -35,7 +35,7 @@ public class Librarian extends Person implements ILabrarian {
     }
 
     @Override
-    String whoYouAre() {
+    public String whoYouAre() {
         return "Kütüphaneci " + name;
     }
 }

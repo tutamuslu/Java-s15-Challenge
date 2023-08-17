@@ -109,7 +109,7 @@ public class Main {
     public static void writeBooks(List<Book> books){
     System.out.println("ID  KİTAP ADI \t KİTAP YAZARI");
         for (int i = 0; i < books.size(); i++){
-            System.out.println(books.get(i).getId() + "\t" + books.get(i).getName() +"\t" + books.get(i).getAuthor());
+            System.out.println(books.get(i).getId() + "\t" + books.get(i).getName() +"\t" + books.get(i).getAuthor().whoYouAre());
         }
     }
 }
